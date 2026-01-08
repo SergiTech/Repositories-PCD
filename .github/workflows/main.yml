@@ -1,0 +1,17 @@
+name: Quincena 7 - Demo
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar info básica
+        run: |
+          echo "Hola! GitHub Actions funciona ✅"
+          echo "Repositorio: $GITHUB_REPOSITORY"
+          echo "Rama: $GITHUB_REF"
+          echo "Commit: $GITHUB_SHA"
